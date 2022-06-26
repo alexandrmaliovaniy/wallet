@@ -28,6 +28,9 @@
 			],
 			"@themes/*": [
 				"./src/themes/*"
+			],
+			"@styles/*": [
+				"./src/styles/*"
 			]
 		},
 		"target": "es5",
