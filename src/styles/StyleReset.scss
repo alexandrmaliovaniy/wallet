@@ -1,12 +1,15 @@
 @font-face {
-	font-family: "Inter";
-	src: local('Inter'), url("../fonts/Inter.ttf") format('truetype');
+  font-family: "Inter";
+  src: local('Inter'), url("../fonts/Inter.ttf") format('truetype');
 }
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
+
 body {
-	font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
