@@ -1,5 +1,6 @@
+import { Property } from "csstype";
+
 export namespace ITheme {
-	export type Color = string | undefined
 
 	export enum Name {
 		DEFAULT = "default"
@@ -12,27 +13,32 @@ export namespace ITheme {
 	export interface Properties {
 		colors: Colors
 	}
-	export interface Colors {
-		orange: Color
-		red: Color
-		green: Color
-		blue: Color
-		purple: Color
-		light: NaturalColors
-		dark: NaturalColors
-		appleLight: NaturalColors
-		appleDark: NaturalColors
+
+	export interface BaseColors {
+		orange: Property.Color
+		red: Property.Color
+		green: Property.Color
+		blue: Property.Color
+		purple: Property.Color
 	}
-	export interface NaturalColors {
-		white: Color,
-		neutral1: Color
-		neutral2: Color
-		neutral3: Color
-		neutral4: Color
-		neutral5: Color
-		neutral6: Color
-		neutral7: Color
-		neutral8: Color
-		black: Color
+
+	export interface Colors extends BaseColors {
+		light: NeutralColors
+		dark: NeutralColors
+		appleLight: NeutralColors
+		appleDark: NeutralColors
+	}
+
+	export interface NeutralColors {
+		white: Property.Color
+		neutral1: Property.Color
+		neutral2: Property.Color
+		neutral3: Property.Color
+		neutral4: Property.Color
+		neutral5: Property.Color
+		neutral6: Property.Color
+		neutral7: Property.Color
+		neutral8: Property.Color
+		black: Property.Color
 	}
 }
